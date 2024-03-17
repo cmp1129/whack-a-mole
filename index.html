@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whack a mole!</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="img/digglet.png" type="image/x-icon" />
+  </head>
+  <body>
+    <button id="toggle-music">🔇</button>
+    <audio id="background-music" autoplay loop>
+      <source src="mp3/bck_music.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    <button id="change-avatar">📷</button>
+    <input
+      type="file"
+      id="avatar-input"
+      style="display: none"
+      accept="image/*"
+    />
+    <img
+      id="randomImage"
+      src=""
+      alt="Random Image"
+      style="visibility: hidden"
+    />
+    <div id="counter">❤️ X<span id="count">0</span></div>
+    <h1 class="score bungee-shade-regular">Score: <span>00</span></h1>
+    <div class="board">
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+    </div>
+    <div id="message-container"></div>
+
+    <div class="cursor"></div>
+
+    <script src="script.js"></script>
+    <script src="extraPoints.js"></script>
+  </body>
+</html>

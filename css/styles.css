@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.bungee-shade-regular {
+  font-family: "Bungee Shade", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.score {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  color: #2e2d2c;
+}
+
+body {
+  background-image: url("/img/background.png");
+  background-size: cover;
+  background-position: center;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.board {
+  height: 600px;
+  width: 600px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 80px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.hole {
+  background-color: #daa9a2;
+  border-radius: 50%;
+  box-shadow: inset 0 10px 0 7px #65342f,
+    inset 0 20px 20px 15px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.hole .mole {
+  width: 70%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  animation: rise 0.4s ease-out;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateX(-50%) translateY(100%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.cursor {
+  height: 110px;
+  width: 100px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  background-image: url("/img/hammer.png");
+  background-size: 100% 100%;
+  transform: translate(-20%, -20%);
+  transition: transform 0.1s;
+  pointer-events: none;
+}
+
+#toggle-music {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 30px;
+}
+
+#change-avatar {
+  position: fixed;
+  top: 60px;
+  left: 10px;
+  font-size: 30px;
+}
+
+.message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  font-size: 3em;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.message-show {
+  opacity: 1;
+}
+
+/* counter random Image*/
+#counter {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #2e2d2c;
+}
+
+#randomImage {
+  width: 40px;
+  height: auto;
+  animation: blink 1s infinite;
+  position: absolute;
+  z-index: 1000;
+}
+
+#randomImage:hover {
+  cursor: pointer;
+}
+
+@keyframes blink {
+  0% {
+    transform: translate(-2px, -2px);
+  }
+  50% {
+    transform: translate(2px, 2px);
+  }
+  100% {
+    transform: translate(-2px, -2px);
+  }
+}
+
+/* tintinear */
+@keyframes tintinear {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.tintinear {
+  animation: tintinear 0.5s infinite;
+}
