@@ -1,6 +1,6 @@
 # Whack a mole!
 
-A little and fun game :3
+A little and fun game :3 If you want to play, click [here](https://cristinamateos11.github.io/whack-a-mole/)
 
 ### How to play
 
